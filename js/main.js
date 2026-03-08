@@ -201,79 +201,7 @@ counters.forEach(counter => {
     counterObserver.observe(counter);
 });
 
-const terminalInput = document.getElementById('terminal-input');
-const terminalOutput = document.getElementById('terminal-output');
-
-const commands = {
-    help: () => [
-        'Available commands:',
-        '  help     - Show this help message',
-        '  about    - About me',
-        '  skills   - My technical skills',
-        '  contact  - Contact information',
-        '  clear    - Clear terminal',
-        '  date     - Show current date',
-        '  whoami   - Who am I?'
-    ],
-    about: () => [
-        '👋 Hi, I am a Full-Stack Developer!',
-        'I love building beautiful and functional web applications.',
-        'Passionate about clean code and great user experiences.'
-    ],
-    skills: () => [
-        '🛠️ Technical Skills:',
-        '  Frontend: React, Vue, TypeScript, TailwindCSS',
-        '  Backend:  Node.js, Python, Go, Rust',
-        '  Database: PostgreSQL, MongoDB, Redis',
-        '  DevOps:   Docker, Kubernetes, AWS, GitHub Actions'
-    ],
-    contact: () => [
-        '📧 Contact me:',
-        '  Email:    hello@example.com',
-        '  GitHub:   github.com/yourusername',
-        '  Twitter:  @yourusername'
-    ],
-    date: () => [new Date().toLocaleString('zh-CN')],
-    whoami: () => ['You are a visitor exploring DevConsole 🚀'],
-    clear: () => {
-        if (terminalOutput) {
-            terminalOutput.innerHTML = '';
-        }
-        return [];
-    }
-};
-
-if (terminalInput) {
-    terminalInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            const input = terminalInput.value.trim().toLowerCase();
-            if (input) {
-                const commandLine = document.createElement('p');
-                commandLine.innerHTML = `<span class="text-green-400">$</span> ${input}`;
-                terminalOutput.appendChild(commandLine);
-
-                if (commands[input]) {
-                    const output = commands[input]();
-                    output.forEach(line => {
-                        const p = document.createElement('p');
-                        p.textContent = line;
-                        p.className = 'text-gray-300';
-                        terminalOutput.appendChild(p);
-                    });
-                } else {
-                    const p = document.createElement('p');
-                    p.textContent = `Command not found: ${input}. Type 'help' for available commands.`;
-                    p.className = 'text-red-400';
-                    terminalOutput.appendChild(p);
-                }
-
-                terminalInput.value = '';
-                terminalOutput.scrollTop = terminalOutput.scrollHeight;
-            }
-        }
-    });
-}
-
+// 卡片淡入动画
 document.querySelectorAll('.panel-card, .blog-card, .project-card').forEach((card, index) => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
@@ -286,6 +214,7 @@ document.querySelectorAll('.panel-card, .blog-card, .project-card').forEach((car
     }, 100);
 });
 
+// 添加涟漪效果样式
 const style = document.createElement('style');
 style.textContent = `
     @keyframes ripple {
@@ -320,3 +249,38 @@ document.querySelectorAll('.panel-card, .blog-card, .project-card').forEach(card
         setTimeout(() => ripple.remove(), 600);
     });
 });
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const filterItems = document.querySelectorAll('[data-category]');
+
+if (filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active', 'bg-cyan-500/20', 'text-cyan-400', 'border-cyan-500/30');
+                btn.classList.add('bg-gray-800', 'text-gray-400', 'border-gray-700');
+            });
+            button.classList.add('active', 'bg-cyan-500/20', 'text-cyan-400', 'border-cyan-500/30');
+            button.classList.remove('bg-gray-800', 'text-gray-400', 'border-gray-700');
+            
+            filterItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
