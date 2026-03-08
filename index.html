@@ -11,6 +11,13 @@
             if (savedTheme === 'dark' || !savedTheme) {
                 document.documentElement.classList.add('dark');
             }
+            
+            // 检查是否已经访问过欢迎页面
+            const hasVisited = localStorage.getItem('hasVisitedWelcome');
+            if (!hasVisited) {
+                localStorage.setItem('hasVisitedWelcome', 'true');
+                window.location.href = 'welcome.html';
+            }
         })();
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -165,27 +172,27 @@
                         <span class="text-gray-400 text-sm">HTML</span>
                         <div class="flex items-center space-x-2">
                             <div class="w-32 h-2 bg-gray-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full progress-bar" style="width: 72.1%"></div>
+                                <div class="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full progress-bar" style="width: 69.9%"></div>
                             </div>
-                            <span class="text-orange-400 text-xs font-mono">72.1%</span>
+                            <span class="text-orange-400 text-xs font-mono">69.9%</span>
                         </div>
                     </div>
                     <div class="flex justify-between items-center">
                         <span class="text-gray-400 text-sm">CSS</span>
                         <div class="flex items-center space-x-2">
                             <div class="w-32 h-2 bg-gray-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full progress-bar" style="width: 16.4%"></div>
+                                <div class="h-full bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full progress-bar" style="width: 16.2%"></div>
                             </div>
-                            <span class="text-purple-400 text-xs font-mono">16.4%</span>
+                            <span class="text-purple-400 text-xs font-mono">16.2%</span>
                         </div>
                     </div>
                     <div class="flex justify-between items-center">
                         <span class="text-gray-400 text-sm">JavaScript</span>
                         <div class="flex items-center space-x-2">
                             <div class="w-32 h-2 bg-gray-700 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full progress-bar" style="width: 11.5%"></div>
+                                <div class="h-full bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full progress-bar" style="width: 13.9%"></div>
                             </div>
-                            <span class="text-yellow-400 text-xs font-mono">11.5%</span>
+                            <span class="text-yellow-400 text-xs font-mono">13.9%</span>
                         </div>
                     </div>
                 </div>

@@ -11,6 +11,13 @@
             if (savedTheme === 'dark' || !savedTheme) {
                 document.documentElement.classList.add('dark');
             }
+            
+            // 检查是否已经访问过欢迎页面 
+            const hasVisited = localStorage.getItem('hasVisitedWelcome');
+            if (!hasVisited) {
+                localStorage.setItem('hasVisitedWelcome', 'true');
+                window.location.href = 'welcome.html';
+            }
         })();
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
