@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陈义 | 技术博客</title>
+    <script>
+        // 在页面渲染前立即应用主题，防止闪烁
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || !savedTheme) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind-config.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -116,7 +125,7 @@
                 </button>
             </div>
             <div class="bg-white rounded-lg p-4 mb-4">
-                <img src="" data-src="img/wx.png" alt="微信二维码" class="w-full h-auto lazyload">
+                <img src="" data-src="img/wx.jpg" alt="微信二维码" class="w-full h-auto lazyload">
             </div>
             <p class="text-gray-400 text-sm text-center">扫描二维码添加微信好友</p>
             <p class="text-cyan-400 text-sm text-center mt-1">微信号：_o_Orange_</p>
