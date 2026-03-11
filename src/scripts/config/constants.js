@@ -23,7 +23,7 @@ export const CONFIG = {
     },
     welcome: {
         storageKey: 'hasVisitedWelcome',
-        redirectUrl: '/Blog/welcome.html'
+        redirectUrl: 'welcome.html'
     },
     counter: {
         duration: 2000,
