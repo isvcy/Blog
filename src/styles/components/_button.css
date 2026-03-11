@@ -1,0 +1,62 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-weight: 600;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-bounce);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-candy-pink);
+    outline-offset: 2px;
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, var(--color-candy-pink), var(--color-candy-purple));
+    color: #ffffff;
+}
+
+.btn--primary:hover {
+    background: linear-gradient(135deg, #ff85ad, #d8b4fe);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 107, 157, 0.4);
+}
+
+.btn--secondary {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn--secondary:hover {
+    background: var(--bg-card);
+    border-color: var(--border-color-hover);
+}
+
+.btn--icon {
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-lg);
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+}
+
+.btn--icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 107, 157, 0.35);
+    border-color: var(--color-candy-pink);
+}
+
+.btn--icon svg {
+    width: 20px;
+    height: 20px;
+    transition: transform var(--transition-slow);
+}
+
+.btn--icon:hover svg {
+    transform: rotate(360deg);
+}

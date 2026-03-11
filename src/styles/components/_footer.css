@@ -1,0 +1,21 @@
+.footer {
+    border-top: 1px solid var(--border-color);
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.footer__text {
+    font-size: 0.875rem;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+}
+
+.footer__heart {
+    background: linear-gradient(135deg, var(--color-candy-pink), var(--color-candy-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

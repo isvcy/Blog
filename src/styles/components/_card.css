@@ -1,0 +1,99 @@
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-bounce);
+    z-index: var(--z-base);
+    box-shadow: var(--glass-shadow);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-candy-pink), var(--color-candy-purple), var(--color-candy-mint));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.card:hover {
+    border-color: var(--border-color-hover);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 107, 157, 0.2);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.card-icon--cyan {
+    background: linear-gradient(135deg, var(--color-candy-pink), var(--color-candy-purple));
+}
+
+.card-icon--purple {
+    background: linear-gradient(135deg, var(--color-candy-purple), var(--color-candy-lavender));
+}
+
+.card-icon--green {
+    background: linear-gradient(135deg, var(--color-candy-mint), var(--color-candy-blue));
+}
+
+.card-icon--orange {
+    background: linear-gradient(135deg, var(--color-candy-orange), var(--color-candy-yellow));
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    transition: color var(--transition-normal);
+}
+
+.card:hover .card-title {
+    color: var(--color-candy-pink);
+}
+
+.card-description {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.card-link {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    font-family: var(--font-mono);
+    color: var(--color-candy-pink);
+    transition: all var(--transition-normal);
+}
+
+.card-link svg {
+    width: 16px;
+    height: 16px;
+    margin-left: var(--spacing-sm);
+    transition: transform var(--transition-normal);
+}
+
+.card:hover .card-link svg {
+    transform: translateX(8px);
+}
