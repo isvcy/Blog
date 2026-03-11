@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系 | 陈义的技术博客</title>
+    <meta name="description" content="联系陈义 - AGV 设备技术运维工程师，可通过微信、邮箱、GitHub 等方式联系">
+    <meta name="keywords" content="联系陈义，微信，邮箱，GitHub,AGV 工程师">
+    <meta name="author" content="陈义">
+    <meta property="og:title" content="联系 | 陈义的技术博客">
+    <meta property="og:description" content="与我取得联系">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://isvcy.github.io/contact.html">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preload" href="src/styles/main.css" as="style">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const theme = savedTheme === 'light' ? 'light' : 'dark';
+            if (theme === 'light') {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body class="min-h-screen overflow-x-hidden">
+    <canvas id="particles"></canvas>
+    <div id="cursor-glow"></div>
+
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__brand">
+                <div class="header__logo"></div>
+                <span class="header__title">陈义 | 技术博客</span>
+            </a>
+            <div class="header__actions">
+                <button id="theme-toggle" class="btn btn--icon" aria-label="切换主题">
+                    <span id="theme-icon" aria-hidden="true">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-10 px-4 max-w-5xl mx-auto relative z-10">
+        <div class="mb-8">
+            <a href="index.html" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors mb-4">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                返回主页
+            </a>
+            <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">
+                <span class="text-orange-400">&gt;</span> Contact
+            </h1>
+            <p class="text-gray-400 font-mono text-sm">与我取得联系</p>
+        </div>
+
+        <div class="space-y-4 mb-8">
+            <div class="contact-link group flex items-center card" data-card>
+                <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mr-4">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.269-.03-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+                    </svg>
+                </div>
+                <div class="flex-1 cursor-pointer" id="wechat-copy">
+                    <h3 class="text-white font-semibold group-hover:text-cyan-400 transition-colors">微信</h3>
+                    <p class="text-gray-400 text-sm">_o_Orange_</p>
+                </div>
+                <button id="wechat-qr-btn" class="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all ml-2" title="显示二维码">
+                    <svg class="w-5 h-5 text-gray-400 hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="contact-link group flex items-center card" data-card id="email-link">
+                <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mr-4">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <div class="flex-1 cursor-pointer">
+                    <h3 class="text-white font-semibold group-hover:text-cyan-400 transition-colors">邮箱</h3>
+                    <p class="text-gray-400 text-sm">695714679@qq.com</p>
+                </div>
+                <button class="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all ml-2" title="复制邮箱">
+                    <svg class="w-5 h-5 text-gray-400 hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="contact-link group flex items-center card" data-card id="github-link">
+                <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center mr-4">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </div>
+                <div class="flex-1 cursor-pointer" id="github-open">
+                    <h3 class="text-white font-semibold group-hover:text-cyan-400 transition-colors">GitHub</h3>
+                    <p class="text-gray-400 text-sm">@isvcy</p>
+                </div>
+                <button class="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all ml-2" title="打开 GitHub">
+                    <svg class="w-5 h-5 text-gray-400 hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+                <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                足迹
+            </h3>
+            <div id="location-canvas" class="relative rounded-lg h-[32rem] sm:h-[32rem] md:h-[32rem] lg:h-[32rem] border border-gray-700 overflow-hidden">
+                <canvas id="location-particles"></canvas>
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="text-center z-10 px-2">
+                        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-green-400 mx-auto mb-1 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <p class="text-white font-semibold text-xs sm:text-sm">江苏省宿迁市</p>
+                        <p class="text-gray-400 text-xs">当前位置</p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                 #location-canvas {
+                     background: rgba(31, 41, 55, 0.5);
+                 }
+                 html:not(.dark) #location-canvas {
+                     background: #ffffff !important;
+                     border-color: rgba(209, 213, 219, 0.6) !important;
+                 }
+                 html:not(.dark) #location-canvas .text-white {
+                     color: rgb(17, 24, 39) !important;
+                     font-weight: 600;
+                 }
+                 html:not(.dark) #location-canvas .text-gray-400 {
+                     color: rgb(75, 85, 99) !important;
+                 }
+                 html:not(.dark) #location-canvas .text-green-400 {
+                     color: rgb(22, 163, 74) !important;
+                 }
+             </style>
+        </div>
+    </main>
+
+    <div id="wechat-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm">
+        <div class="bg-gray-900 rounded-2xl p-6 max-w-sm mx-4 border border-gray-700 shadow-2xl transform transition-all">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-white">微信二维码</h3>
+                <button onclick="closeWechatQR()" class="text-gray-400 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="bg-white rounded-lg p-4 mb-4">
+                <img src="img/wx.jpg" alt="微信二维码" class="w-full h-auto">
+            </div>
+            <p class="text-gray-400 text-sm text-center">扫描二维码添加微信好友</p>
+            <p class="text-cyan-400 text-sm text-center mt-1">微信号：_o_Orange_</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer__text">
+            © 2026 陈义 | 技术博客 | 用 <span class="footer__heart">兴趣</span> 和代码构建
+        </p>
+    </footer>
+
+    <script src="src/scripts/bundle.js"></script>
+    <script>
+        document.getElementById('wechat-copy').addEventListener('click', copyWechat);
+        document.getElementById('wechat-qr-btn').addEventListener('click', showWechatQR);
+        document.getElementById('email-link').addEventListener('click', copyEmail);
+        document.getElementById('github-link').addEventListener('click', openGitHub);
+
+        function copyWechat() {
+            const wechat = '_o_Orange_';
+            navigator.clipboard.writeText(wechat).then(() => {
+                showToast('微信号已复制到剪贴板');
+            }).catch(err => {
+                console.error('复制失败:', err);
+                showToast('复制失败，请手动复制');
+            });
+        }
+
+        function showWechatQR() {
+            const modal = document.getElementById('wechat-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeWechatQR() {
+            const modal = document.getElementById('wechat-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        document.getElementById('wechat-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'wechat-modal') {
+                closeWechatQR();
+            }
+        });
+
+        function copyEmail() {
+            const email = '695714679@qq.com';
+            navigator.clipboard.writeText(email).then(() => {
+                showToast('邮箱地址已复制到剪贴板');
+            }).catch(err => {
+                console.error('复制失败:', err);
+                showToast('复制失败，请手动复制');
+            });
+        }
+
+        function openGitHub(e) {
+            if (e.target.closest('button')) return;
+            window.open('https://github.com/isvcy', '_blank');
+        }
+
+        function showToast(message) {
+            const existingToast = document.getElementById('toast');
+            if (existingToast) {
+                existingToast.remove();
+            }
+
+            const toast = document.createElement('div');
+            toast.id = 'toast';
+            toast.className = 'fixed top-24 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 font-medium';
+            toast.textContent = message;
+            toast.style.animation = 'fadeInOut 2s ease';
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 2000);
+        }
+
+        // 动态粒子位置效果
+        class LocationParticles {
+            constructor() {
+                this.canvas = document.getElementById('location-particles');
+                this.ctx = this.canvas.getContext('2d');
+                this.container = document.getElementById('location-canvas');
+                this.particles = [];
+                this.animationFrame = null;
+                this.init();
+            }
+
+            init() {
+                this.resize();
+                this.createParticles();
+                this.animate();
+                window.addEventListener('resize', () => this.resize());
+            }
+
+            resize() {
+                const rect = this.container.getBoundingClientRect();
+                this.canvas.width = rect.width;
+                this.canvas.height = rect.height;
+                this.canvas.style.width = rect.width + 'px';
+                this.canvas.style.height = rect.height + 'px';
+                this.width = rect.width;
+                this.height = rect.height;
+                
+                // 重新计算城市位置（基于新尺寸）
+                this.recalculatePositions();
+            }
+
+            recalculatePositions() {
+                const centerX = this.width / 2;
+                const centerY = this.height / 2;
+                
+                // 根据容器宽度动态调整偏移量（响应式）
+                const isMobile = this.width < 400;
+                const scale = isMobile ? 0.5 : 1;
+                
+                // 基于中国地图的相对位置（以宿迁为中心）
+                const cityOffsets = [
+                    { name: '宿迁', offsetX: 0, offsetY: 0, isHome: true },
+                    { name: '南京', offsetX: -120 * scale, offsetY: 90 * scale },
+                    { name: '扬州', offsetX: -45 * scale, offsetY: 60 * scale },
+                    { name: '启东', offsetX: 120 * scale, offsetY: 105 * scale },
+                    { name: '上海', offsetX: 90 * scale, offsetY: 165 * scale },
+                    { name: '苏州', offsetX: 60 * scale, offsetY: 142 * scale },
+                    { name: '昆山', offsetX: 75 * scale, offsetY: 150 * scale },
+                    { name: '安徽', offsetX: -270 * scale, offsetY: 45 * scale },
+                    { name: '北京', offsetX: 0, offsetY: -210 * scale }
+                ];
+
+                // 更新粒子位置
+                this.particles.forEach((particle, index) => {
+                    if (cityOffsets[index]) {
+                        const offset = cityOffsets[index];
+                        const newX = centerX + offset.offsetX;
+                        const newY = centerY + offset.offsetY;
+                        
+                        particle.baseX = newX;
+                        particle.baseY = newY;
+                        
+                        // 立即更新所有粒子的位置（不只是中心粒子）
+                        particle.x = newX;
+                        particle.y = newY;
+                        
+                        // 更新城市信息
+                        particle.name = offset.name;
+                        particle.isHome = offset.isHome;
+                    }
+                });
+            }
+
+            createParticles() {
+                const centerX = this.width / 2;
+                const centerY = this.height / 2;
+                const isMobile = this.width < 400;
+                const scale = isMobile ? 0.5 : 1;
+                
+                // 基于中国地图的相对位置（以宿迁为中心）
+                const cityOffsets = [
+                    { name: '宿迁', offsetX: 0, offsetY: 0, isHome: true },
+                    { name: '南京', offsetX: -120 * scale, offsetY: 90 * scale },
+                    { name: '扬州', offsetX: -45 * scale, offsetY: 60 * scale },
+                    { name: '启东', offsetX: 120 * scale, offsetY: 105 * scale },
+                    { name: '上海', offsetX: 90 * scale, offsetY: 165 * scale },
+                    { name: '苏州', offsetX: 60 * scale, offsetY: 142 * scale },
+                    { name: '昆山', offsetX: 75 * scale, offsetY: 150 * scale },
+                    { name: '安徽', offsetX: -270 * scale, offsetY: 45 * scale },
+                    { name: '北京', offsetX: 0, offsetY: -210 * scale }
+                ];
+                
+                this.particles = [];
+                cityOffsets.forEach((offset) => {
+                    const particle = {
+                        x: centerX + offset.offsetX,
+                        y: centerY + offset.offsetY,
+                        baseX: centerX + offset.offsetX,
+                        baseY: centerY + offset.offsetY,
+                        vx: (Math.random() - 0.5) * 0.3,
+                        vy: (Math.random() - 0.5) * 0.3,
+                        radius: offset.isHome ? (isMobile ? 4 : 5) : (isMobile ? 2 : 3),
+                        color: offset.isHome ? '#4ade80' : '#22c55e',
+                        name: offset.name,
+                        isHome: offset.isHome,
+                        angle: Math.random() * Math.PI * 2,
+                        speed: 0.005 + Math.random() * 0.01
+                    };
+                    this.particles.push(particle);
+                });
+            }
+
+            drawConnections() {
+                const homeParticle = this.particles.find(p => p.isHome);
+                if (!homeParticle) return;
+
+                const isDarkMode = document.documentElement.classList.contains('dark');
+                this.ctx.strokeStyle = isDarkMode ? 'rgba(74, 222, 128, 0.15)' : 'rgba(34, 197, 94, 0.3)';
+                this.ctx.lineWidth = 1;
+
+                this.particles.forEach(particle => {
+                    if (particle.isHome) return;
+
+                    const dx = homeParticle.x - particle.x;
+                    const dy = homeParticle.y - particle.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    // 始终绘制连接线，不受距离限制
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(homeParticle.x, homeParticle.y);
+                    this.ctx.lineTo(particle.x, particle.y);
+                    this.ctx.stroke();
+
+                    // 绘制流动的光点
+                    const progress = (Date.now() * 0.001) % 1;
+                    const flowX = homeParticle.x + dx * progress;
+                    const flowY = homeParticle.y + dy * progress;
+
+                    this.ctx.fillStyle = isDarkMode ? 'rgba(74, 222, 128, 0.6)' : 'rgba(34, 197, 94, 0.8)';
+                    this.ctx.beginPath();
+                    this.ctx.arc(flowX, flowY, 1.5, 0, Math.PI * 2);
+                    this.ctx.fill();
+                });
+            }
+
+            drawParticles() {
+                this.particles.forEach(particle => {
+                    // 只有非中心位置的粒子才会移动
+                    if (!particle.isHome) {
+                        // 添加随机运动（减小幅度）
+                        particle.angle += particle.speed * 0.5;
+                        
+                        // 围绕基础位置做小幅度摆动
+                        const offsetX = Math.cos(particle.angle) * 3;
+                        const offsetY = Math.sin(particle.angle) * 3;
+                        
+                        particle.x = particle.baseX + offsetX;
+                        particle.y = particle.baseY + offsetY;
+                    }
+
+                    // 绘制光晕
+                    const gradient = this.ctx.createRadialGradient(
+                        particle.x, particle.y, 0,
+                        particle.x, particle.y, particle.radius * 3
+                    );
+                    gradient.addColorStop(0, particle.color + '40');
+                    gradient.addColorStop(1, 'transparent');
+
+                    this.ctx.fillStyle = gradient;
+                    this.ctx.beginPath();
+                    this.ctx.arc(particle.x, particle.y, particle.radius * 3, 0, Math.PI * 2);
+                    this.ctx.fill();
+
+                    // 绘制粒子
+                    this.ctx.fillStyle = particle.color;
+                    this.ctx.beginPath();
+                    this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+                    this.ctx.fill();
+
+                    // 绘制城市名称
+                    if (!particle.isHome) {
+                        const isDarkMode = document.documentElement.classList.contains('dark');
+                        const isMobile = this.width < 400;
+                        this.ctx.fillStyle = isDarkMode ? 'rgba(156, 163, 175, 0.8)' : 'rgba(55, 65, 81, 0.9)';
+                        this.ctx.font = isMobile ? '9px sans-serif' : '11px sans-serif';
+                        this.ctx.textAlign = 'center';
+                        this.ctx.fillText(particle.name, particle.x, particle.y - 8);
+                    }
+                });
+            }
+
+            animate() {
+                this.ctx.clearRect(0, 0, this.width, this.height);
+                this.drawConnections();
+                this.drawParticles();
+                this.animationFrame = requestAnimationFrame(() => this.animate());
+            }
+
+            destroy() {
+                if (this.animationFrame) {
+                    cancelAnimationFrame(this.animationFrame);
+                }
+            }
+        }
+
+        // 初始化位置粒子效果
+        const locationParticles = new LocationParticles();
+    </script>
+    <style>
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translate(-50%, -20px); }
+            20% { opacity: 1; transform: translate(-50%, 0); }
+            80% { opacity: 1; transform: translate(-50%, 0); }
+            100% { opacity: 0; transform: translate(-50%, -20px); }
+        }
+    </style>
+</body>
+</html>

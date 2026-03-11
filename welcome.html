@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎 | 陈义的技术博客</title>
+    <meta name="description" content="欢迎来到陈义的技术博客 - AGV 设备技术运维工程师，分享技术文章与项目经验">
+    <meta name="keywords" content="陈义，技术博客，AGV，运维，自动化">
+    <meta name="author" content="陈义">
+    <meta property="og:title" content="欢迎 | 陈义的技术博客">
+    <meta property="og:description" content="AGV 设备技术运维工程师的技术分享">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://isvcy.github.io/welcome.html">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preload" href="src/styles/main.css" as="style">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const theme = savedTheme === 'light' ? 'light' : 'dark';
+            if (theme === 'light') {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="src/styles/main.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .animate-pulse-custom {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        .typing-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background-color: currentColor;
+            margin-left: 2px;
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="min-h-screen overflow-hidden transition-colors duration-500">
+    <canvas id="particles"></canvas>
+    
+    <div class="min-h-screen flex items-center justify-center px-4 relative z-10">
+        <div class="text-center max-w-2xl">
+            <div class="animate-fade-in opacity-0">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center animate-float overflow-hidden">
+                    <img src="https://q1.qlogo.cn/g?b=qq&nk=695714679&s=100" alt="QQ 头像" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in opacity-0 delay-100">
+                欢迎来到
+            </h1>
+            
+            <h2 class="text-3xl md:text-5xl font-bold text-cyan-400 mb-6 animate-fade-in opacity-0 delay-200">
+                我的技术博客
+            </h2>
+            
+            <p class="text-gray-400 text-lg md:text-xl mb-8 animate-fade-in opacity-0 delay-300">
+                <span id="typing-text"></span><span class="typing-cursor"></span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 delay-400">
+                <a href="index.html" class="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all transform hover:scale-105 shadow-lg animate-pulse-custom">
+                    <span class="flex items-center">
+                        开始探索
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </span>
+                </a>
+                
+                <a href="resume.html" class="px-8 py-4 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all transform hover:scale-105 border border-gray-700">
+                    查看简历
+                </a>
+            </div>
+            
+            <div class="mt-12 animate-fade-in opacity-0 delay-500">
+                <p class="text-gray-500 text-sm">
+                    前端开发 · 全栈工程师 · 技术爱好者
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer__text">
+            © 2026 陈义 | 技术博客 | 用 <span class="footer__heart">兴趣</span> 和代码构建
+        </p>
+    </footer>
+    
+    <script src="src/scripts/bundle.js"></script>
+    <script>
+        const texts = [
+            '在数字的海洋里，',
+            '我是一个探索者',
+            '清晨的第一缕阳光',
+            '照亮了代码的世界',
+            '键盘敲击声响起，',
+            '像是晨钟暮鼓',
+            '每一行代码都是足迹',
+            '记录着成长的轨迹',
+            '从宿迁出发，',
+            '走过南京的梧桐',
+            '路过扬州的古巷',
+            '在北京的霓虹下思考',
+            '在上海的繁华里沉淀',
+            '在苏州的园林中感悟',
+            '昆山的工厂有我的汗水',
+            '启东的海边有我的梦想',
+            '安徽的山水给我灵感',
+            '每一座城市都是老师',
+            '教会我不同的技术',
+            '每一次旅行都是修行',
+            '让我更加坚定前行',
+            'AGV 设备是我的伙伴',
+            '自动化是我的追求',
+            '在运维的路上',
+            '我既是工匠也是诗人',
+            '用代码书写人生',
+            '用技术连接未来',
+            '这就是我的故事',
+            '一个关于热爱与坚持的故事'
+        ];
+        const typingElement = document.getElementById('typing-text');
+        const cursorElement = document.querySelector('.typing-cursor');
+        let currentIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function typeWriter() {
+            const currentText = texts[currentIndex];
+            
+            if (isDeleting) {
+                if (charIndex > 0) {
+                    typingElement.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(typeWriter, 50);
+                } else {
+                    isDeleting = false;
+                    currentIndex = (currentIndex + 1) % texts.length;
+                    charIndex = 0;
+                    setTimeout(typeWriter, 500);
+                }
+            } else {
+                if (charIndex < currentText.length) {
+                    typingElement.textContent += currentText.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    setTimeout(() => {
+                        isDeleting = true;
+                        typeWriter();
+                    }, 2000);
+                }
+            }
+        }
+        
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 800);
+        });
+    </script>
+</body>
+</html>

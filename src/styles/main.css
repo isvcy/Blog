@@ -1,0 +1,317 @@
+@import 'base/_reset.css';
+@import 'base/_variables.css';
+@import 'base/_typography.css';
+
+@import 'components/_card.css';
+@import 'components/_button.css';
+@import 'components/_badge.css';
+@import 'components/_header.css';
+@import 'components/_footer.css';
+
+@import 'utilities/_animations.css';
+@import 'utilities/_responsive.css';
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#cursor-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: var(--radius-full);
+    background: radial-gradient(circle, rgba(255, 107, 157, 0.2) 0%, rgba(192, 132, 252, 0.1) 50%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity var(--transition-normal);
+}
+
+html:not(.dark) #cursor-glow {
+    background: radial-gradient(circle, rgba(255, 107, 157, 0.15) 0%, rgba(192, 132, 252, 0.08) 50%, transparent 70%);
+}
+
+.skill-bar {
+    height: 8px;
+    background: rgba(128, 128, 128, 0.2);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar__fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1s ease-out;
+    position: relative;
+}
+
+.skill-bar__fill--cyan {
+    background: linear-gradient(90deg, var(--color-candy-pink), var(--color-candy-purple));
+}
+
+.skill-bar__fill--purple {
+    background: linear-gradient(90deg, var(--color-candy-purple), var(--color-candy-lavender));
+}
+
+.skill-bar__fill--green {
+    background: linear-gradient(90deg, var(--color-candy-mint), var(--color-candy-blue));
+}
+
+.skill-bar__fill--orange {
+    background: linear-gradient(90deg, var(--color-candy-orange), var(--color-candy-yellow));
+}
+
+.skill-bar__fill--yellow {
+    background: linear-gradient(90deg, var(--color-candy-yellow), var(--color-candy-peach));
+}
+
+.counter {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+
+.counter--cyan {
+    color: var(--color-candy-pink);
+}
+
+.counter--purple {
+    color: var(--color-candy-purple);
+}
+
+.counter--green {
+    color: var(--color-candy-mint);
+}
+
+.blog-content {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3 {
+    margin-top: var(--spacing-xl);
+}
+
+.blog-content p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.blog-content ul,
+.blog-content ol {
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-xl);
+}
+
+.blog-content ul {
+    list-style: disc;
+}
+
+.blog-content ol {
+    list-style: decimal;
+}
+
+.blog-content li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+}
+
+.blog-content img {
+    border-radius: var(--radius-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.blog-content code {
+    font-size: 0.9em;
+}
+
+.blog-content pre {
+    margin: var(--spacing-lg) 0;
+}
+
+/* 白天模式样式覆盖 */
+html:not(.dark) .text-white {
+    color: var(--text-primary) !important;
+}
+
+html:not(.dark) .text-gray-300 {
+    color: #374151 !important;
+}
+
+html:not(.dark) .text-gray-400 {
+    color: var(--text-secondary) !important;
+}
+
+html:not(.dark) .text-gray-500 {
+    color: var(--text-muted) !important;
+}
+
+html:not(.dark) .text-gray-600 {
+    color: #4b5563 !important;
+}
+
+html:not(.dark) .text-gray-700 {
+    color: #374151 !important;
+}
+
+html:not(.dark) .text-cyan-400 {
+    color: #0891b2 !important;
+}
+
+html:not(.dark) .text-purple-400 {
+    color: #a855f7 !important;
+}
+
+html:not(.dark) .text-green-400 {
+    color: #4ade80 !important;
+}
+
+html:not(.dark) .text-blue-400 {
+    color: #60a5fa !important;
+}
+
+html:not(.dark) .text-pink-400 {
+    color: #f472b6 !important;
+}
+
+html:not(.dark) .text-orange-400 {
+    color: #fb923c !important;
+}
+
+html:not(.dark) .text-yellow-400 {
+    color: #fbbf24 !important;
+}
+
+html:not(.dark) .text-blue-300 {
+    color: #1e40af !important;
+}
+
+html:not(.dark) .text-green-300 {
+    color: #15803d !important;
+}
+
+html:not(.dark) .text-purple-300 {
+    color: #7e22ce !important;
+}
+
+html:not(.dark) .text-orange-300 {
+    color: #c2410c !important;
+}
+
+html:not(.dark) .text-red-300 {
+    color: #b91c1c !important;
+}
+
+html:not(.dark) .text-indigo-300 {
+    color: #3730a3 !important;
+}
+
+html:not(.dark) .text-pink-300 {
+    color: #be185d !important;
+}
+
+html:not(.dark) .text-cyan-300 {
+    color: #0e7490 !important;
+}
+
+html:not(.dark) .text-amber-300 {
+    color: #b45309 !important;
+}
+
+html:not(.dark) .text-teal-300 {
+    color: #0f766e !important;
+}
+
+html:not(.dark) .bg-gray-800 {
+    background-color: rgba(243, 244, 246, 0.8) !important;
+}
+
+html:not(.dark) .bg-gray-800\/50 {
+    background-color: rgba(243, 244, 246, 0.5) !important;
+}
+
+html:not(.dark) .bg-gray-700 {
+    background-color: rgba(229, 231, 235, 0.8) !important;
+}
+
+html:not(.dark) .bg-gray-700\/50 {
+    background-color: rgba(229, 231, 235, 0.5) !important;
+}
+
+html:not(.dark) .bg-gray-900 {
+    background-color: rgba(243, 244, 246, 0.9) !important;
+}
+
+html:not(.dark) .bg-blue-900\/50 {
+    background-color: rgba(219, 234, 254, 0.6) !important;
+}
+
+html:not(.dark) .bg-green-900\/50 {
+    background-color: rgba(220, 252, 231, 0.6) !important;
+}
+
+html:not(.dark) .bg-purple-900\/50 {
+    background-color: rgba(243, 232, 255, 0.6) !important;
+}
+
+html:not(.dark) .bg-orange-900\/50 {
+    background-color: rgba(255, 237, 213, 0.6) !important;
+}
+
+html:not(.dark) .bg-red-900\/50 {
+    background-color: rgba(254, 226, 226, 0.6) !important;
+}
+
+html:not(.dark) .bg-indigo-900\/50 {
+    background-color: rgba(224, 231, 255, 0.6) !important;
+}
+
+html:not(.dark) .bg-pink-900\/50 {
+    background-color: rgba(252, 231, 243, 0.6) !important;
+}
+
+html:not(.dark) .bg-cyan-900\/50 {
+    background-color: rgba(207, 250, 254, 0.6) !important;
+}
+
+html:not(.dark) .bg-cyan-500\/20 {
+    background-color: rgba(207, 250, 254, 0.5) !important;
+}
+
+html:not(.dark) .bg-blue-500\/20 {
+    background-color: rgba(219, 234, 254, 0.5) !important;
+}
+
+html:not(.dark) .bg-green-500\/20 {
+    background-color: rgba(209, 250, 229, 0.5) !important;
+}
+
+html:not(.dark) .bg-yellow-500\/20 {
+    background-color: rgba(254, 249, 195, 0.5) !important;
+}
+
+html:not(.dark) .bg-amber-900\/50 {
+    background-color: rgba(254, 243, 199, 0.6) !important;
+}
+
+html:not(.dark) .bg-teal-900\/50 {
+    background-color: rgba(204, 251, 241, 0.6) !important;
+}
+
+html:not(.dark) .border-gray-700 {
+    border-color: rgba(209, 213, 219, 0.5) !important;
+}
+
+html:not(.dark) .border-gray-600 {
+    border-color: rgba(209, 213, 219, 0.6) !important;
+}
