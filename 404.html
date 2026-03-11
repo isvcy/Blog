@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/Blog/">
     <title>页面未找到 | 陈义的技术博客</title>
     <meta name="description" content="抱歉，您访问的页面不存在">
     <meta name="robots" content="noindex">
@@ -39,7 +40,7 @@
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="index.html" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all transform hover:scale-105">
+                <a href="/Blog/index.html" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all transform hover:scale-105">
                     返回首页
                 </a>
                 <a href="javascript:history.back()" class="px-8 py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all border border-gray-700">
@@ -64,7 +65,7 @@
             
             if (seconds <= 0) {
                 clearInterval(timer);
-                window.location.href = 'index.html';
+                window.location.href = '/Blog/index.html';
             }
         }, 1000);
     </script>
